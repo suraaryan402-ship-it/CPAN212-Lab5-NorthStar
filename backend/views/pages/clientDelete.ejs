@@ -1,0 +1,19 @@
+<section class="mb-3 d-flex gap-2">
+  <a class="btn btn-outline-secondary btn-sm" href="/clients/<%= clientt.id %>">Back to Profile</a>
+  <a class="btn btn-outline-dark btn-sm" href="/clients">Back to Clients</a>
+</section>
+
+<section class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="h5 mb-3">Delete Client</h2>
+
+    <div class="alert alert-danger">
+      Are you sure you want to delete <strong><%= clientt.fullName %></strong> (ID: <%= clientt.id %>)?
+    </div>
+
+    <form method="POST" action="/clients/<%= clientt.id %>/delete" class="d-flex gap-2">
+      <button class="btn btn-danger" type="submit">Yes, Delete</button>
+      <a class="btn btn-outline-secondary" href="/clients/<%= clientt.id %>">Cancel</a>
+    </form>
+  </div>
+</section>
